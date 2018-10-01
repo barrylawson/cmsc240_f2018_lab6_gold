@@ -48,9 +48,13 @@ int main()
    // test CharacterVector: put, get, size, out_of_range
 
    std::cout << std::endl;
+   cv.put('h');
    std::cout << "----------------" << std::endl;
    std::cout << "CharacterVector:" << std::endl;
-   std::cout << "----------------" << std::endl;
+   std::cout << cv.get(0)<< std::endl;
+   std::cout << cv.size() << std::endl;
+   std::cout << cv.get(10) << std::endl; //out of range
+    std::cout << "----------------" << std::endl;
 
    //-------------------------------------------------------------------------
 
