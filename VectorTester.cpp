@@ -2,6 +2,7 @@
 #include "IntegerVector.h"
 #include "DoubleVector.h"
 #include "CharacterVector.h"
+#include <stdexcept>
 
 int main()
 {
@@ -51,9 +52,15 @@ int main()
    cv.put('h');
    std::cout << "----------------" << std::endl;
    std::cout << "CharacterVector:" << std::endl;
-   std::cout << cv.get(0)<< std::endl;
-   std::cout << cv.size() << std::endl;
-   // std::cout << cv.get(10) << std::endl; //out of range
+   std::cout << "cv.get(0)" << cv.get(0)<< ": 'h'" << std::endl;
+   std::cout << "cv.size()" << cv.size() <<  ": 0" << std::endl;
+   try
+   {
+     std::cout << "cv.get(10): " << cv.get(10) << std::endl;
+   } catch (std::out_of_range)
+   {
+     std::cout<< "Index out of range" << std::endl;
+   }
     std::cout << "----------------" << std::endl;
 
    //-------------------------------------------------------------------------
@@ -62,6 +69,7 @@ int main()
 
    std::cout << std::endl;
    std::cout << "-------------" << std::endl;
+   std::cout << std::endl;
    std::cout << "DoubleVector:" << std::endl;
    dv.put(4.0);
    dv.put(3.3);
@@ -94,6 +102,18 @@ int main()
    {
       std::cout << dv.get(i) << " ";
    }
+
+   std::cout << std::endl;
+   std::cout << std::endl;
+
+   try
+   {
+     std::cout << "dv.get(10): " << cv.get(10) << std::endl;
+   } catch (std::out_of_range)
+   {
+     std::cout<< "Index out of range" << std::endl;
+   }
+
    std::cout << std::endl;
    std::cout << "-------------" << std::endl;
 
