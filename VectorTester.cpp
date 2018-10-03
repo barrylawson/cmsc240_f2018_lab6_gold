@@ -35,12 +35,10 @@ int main()
 
    std::cout << "iv.size(): " << iv.size() << " [6]" << std::endl;
    try
-   {
+
      std::cout << "iv.get(10): " <<iv.get(10) << std::endl;
-   } catch (std::out_of_range)
-   {
+   catch (std::out_of_range)
      std::cout<< "Index out of range" << std::endl;
-   }
 
 
    //-------------------------------------------------------------------------
@@ -51,9 +49,15 @@ int main()
    cv.put('h');
    std::cout << "----------------" << std::endl;
    std::cout << "CharacterVector:" << std::endl;
-   std::cout << cv.get(0)<< std::endl;
-   std::cout << cv.size() << std::endl;
-   // std::cout << cv.get(10) << std::endl; //out of range
+   std::cout << "cv.get(0)" << cv.get(0)<< << ": 'h'"std::endl;
+   std::cout << "cv.size()" << cv.size() <<  ": 0"std::endl;
+   try
+   {
+     std::cout << "cv.get(10): " << cv.get(10) << std::endl;
+   } catch (std::out_of_range)
+   {
+     std::cout<< "Index out of range" << std::endl;
+   }
     std::cout << "----------------" << std::endl;
 
    //-------------------------------------------------------------------------

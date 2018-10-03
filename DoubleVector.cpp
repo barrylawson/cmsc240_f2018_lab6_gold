@@ -15,8 +15,8 @@ int DoubleVector::size()
 
 // just return the double at the specified index; use the at() method rather
 // than [] so that an out_of_range error will be thrown for an invalid index
-double DoubleVector::get(int index) 
-{ 
+double DoubleVector::get(int index)
+{
    return doubleVector.at(index);
 }
 
@@ -24,7 +24,7 @@ double DoubleVector::get(int index)
 // otherwise, use push_back to append to the end of the vector
 void DoubleVector::put(double value, int index)
 {
-	if(index <= (doubleVector.size() - 1))
+	if(index <= (size() - 1))
 	{
 		doubleVector.at(index) = value;
 	}
