@@ -48,9 +48,13 @@ int main()
    // test CharacterVector: put, get, size, out_of_range
 
    std::cout << std::endl;
+   cv.put('h');
    std::cout << "----------------" << std::endl;
    std::cout << "CharacterVector:" << std::endl;
-   std::cout << "----------------" << std::endl;
+   std::cout << cv.get(0)<< std::endl;
+   std::cout << cv.size() << std::endl;
+   // std::cout << cv.get(10) << std::endl; //out of range
+    std::cout << "----------------" << std::endl;
 
    //-------------------------------------------------------------------------
 
@@ -59,6 +63,38 @@ int main()
    std::cout << std::endl;
    std::cout << "-------------" << std::endl;
    std::cout << "DoubleVector:" << std::endl;
+   dv.put(4.0);
+   dv.put(3.3);
+   dv.put(9.4);
+   std::cout << "Used put(double n) to add 4.0, 3.3, 9.4 : " << std::endl;
+
+   for(int i = 0; i < dv.size(); i++)
+   {
+      std::cout << dv.get(i) << " ";
+   }
+
+
+   std::cout << std::endl;
+   std::cout << std::endl;
+
+
+   dv.put(11.1, 1);
+   std::cout << "Used put(double n, int m) to put 11.1 at middle index : " << std::endl;
+   for(int i = 0; i < dv.size(); i++)
+   {
+      std::cout << dv.get(i) << " ";
+   }
+
+   std::cout << std::endl;
+   std::cout << std::endl;
+
+   std::cout << "Used get(int n) to print out values in reverse : " << std::endl;
+
+   for(int i = dv.size()-1; i > -1; i--)
+   {
+      std::cout << dv.get(i) << " ";
+   }
+   std::cout << std::endl;
    std::cout << "-------------" << std::endl;
 
    //-------------------------------------------------------------------------
