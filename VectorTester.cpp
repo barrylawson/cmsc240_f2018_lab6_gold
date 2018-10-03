@@ -51,8 +51,8 @@ int main()
    cv.put('h');
    std::cout << "----------------" << std::endl;
    std::cout << "CharacterVector:" << std::endl;
-   std::cout << "cv.get(0)" << cv.get(0)<< << ": 'h'"std::endl;
-   std::cout << "cv.size()" << cv.size() <<  ": 0"std::endl;
+   std::cout << "cv.get(0)" << cv.get(0)<< ": 'h'" << std::endl;
+   std::cout << "cv.size()" << cv.size() <<  ": 0" << std::endl;
    try
    {
      std::cout << "cv.get(10): " << cv.get(10) << std::endl;
