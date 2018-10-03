@@ -53,9 +53,6 @@ int main()
    std::cout << "----------------" << std::endl;
    std::cout << "CharacterVector:" << std::endl;
    std::cout << "cv.get(0)" << cv.get(0)<< ": 'h'" << std::endl;
-   std::cout << "cv.size()" << cv.size() <<  ": 0" << std::endl;
-   std::cout << "cv.get(0)" << cv.get(0)<< ": 'h'" << std::endl;
-   std::cout << "cv.size()" << cv.size() <<  ": 0" << std::endl;
    std::cout << "cv.size()" << cv.size() <<  ": 1" << std::endl;
    try
    {
@@ -142,6 +139,11 @@ int main()
    std::cout << "----------------------------" << std::endl;
    std::cout << "appended-to CharacterVector:" << std::endl;
    std::cout << "----------------------------" << std::endl;
+   cv2.appendIntegerVector(iv);
+   cv2.appendDoubleVector(dv);
+   for(int i = 0; i < cv2.size(); i++){
+      std::cout << cv2.get(i) << std::endl;
+   }
 
    //-------------------------------------------------------------------------
 
