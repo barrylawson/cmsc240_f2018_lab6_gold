@@ -68,6 +68,7 @@ int main()
 
    std::cout << std::endl;
    std::cout << "-------------" << std::endl;
+   std::cout << std::endl;
    std::cout << "DoubleVector:" << std::endl;
    dv.put(4.0);
    dv.put(3.3);
@@ -100,6 +101,18 @@ int main()
    {
       std::cout << dv.get(i) << " ";
    }
+
+   std::cout << std::endl;
+   std::cout << std::endl;
+
+   try
+   {
+     std::cout << "dv.get(10): " << cv.get(10) << std::endl;
+   } catch (std::out_of_range)
+   {
+     std::cout<< "Index out of range" << std::endl;
+   }
+
    std::cout << std::endl;
    std::cout << "-------------" << std::endl;
 
