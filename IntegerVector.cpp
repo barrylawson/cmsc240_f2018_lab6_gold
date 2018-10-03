@@ -25,13 +25,9 @@ int IntegerVector::get(int index)
 void IntegerVector::put(int value, int index)
 {
   if (index < this->size()) // verify that index is smaller than size
-  {
     integerVector.at(index) = value; // use insert method to add elements before index
-  }
   else
-  {
     this->put(value); // use put method defined hereafter to add to end of vector
-  }
 }
 
 // use push_back to append

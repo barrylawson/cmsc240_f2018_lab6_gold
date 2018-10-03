@@ -72,7 +72,10 @@ int main()
    std::cout << "--------------------------" << std::endl;
 
    //-------------------------------------------------------------------------
-
+   iv.appendDoubleVector(dv);
+   iv.appendCharacterVector(cv);
+   for(int i = 0; i < iv.size(); i++)
+     std::cout << iv.get(i) << std::endl;
    // using empty CharacterVector, test appending iv & dv from above
    CharacterVector cv2;
 
