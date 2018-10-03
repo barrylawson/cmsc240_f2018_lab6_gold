@@ -2,6 +2,7 @@
 #include "IntegerVector.h"
 #include "DoubleVector.h"
 #include "CharacterVector.h"
+#include <stdexcept>
 
 int main()
 {
