@@ -24,11 +24,7 @@ double DoubleVector::get(int index)
 // otherwise, use push_back to append to the end of the vector
 void DoubleVector::put(double value, int index)
 {
-<<<<<<< HEAD
-	if(index <= (size() - 1))
-=======
 	if(index <= (this->size() - 1))
->>>>>>> 07eaf19654267abfb0a71ddc081a39aef3be3687
 	{
 		doubleVector.at(index) = value;
 	}
