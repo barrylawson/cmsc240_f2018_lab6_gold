@@ -18,31 +18,31 @@ int main()
    std::cout << "IntegerVector:" << std::endl;
    std::cout << "--------------" << std::endl;
    std::cout << "iv.put(10)" << std::endl;
-   iv.put(10);
+   iv.put(78);
 
-   std::cout << "iv.get(0): " <<  iv.get(0) << " [10]" << std::endl;
+   std::cout << "iv.get(0): " <<  iv.get(0) << " [78]" << std::endl;
    std::cout << "iv.size(): " << iv.size() << " [1]" << std:: endl;
 
    std::cout << "Add 5 elements to iv" << std::endl;
-   for (int i = 0; i < 5; i++)
+   for (int i = 79; i < 84; i++)
    {
-     std::cout << "Element being added: " << 3*i << std::endl;
-     iv.put(3*i, i + 6); // add 5 elements to iv
+     std::cout << "Element being added: " << i << std::endl;
+     iv.put(i); // add 5 elements to iv
    }
-   for (int i = 1; i < iv.size(); i++)
+   for (int i = 0; i < iv.size(); i++)
    {
-     std::cout << "iv.get(" << i << "): " << iv.get(i) << " [" << 3*(i-1) <<"]"<< std::endl;
+     std::cout << "iv.get(" << i << "): " << iv.get(i) << " [" << i+78 <<"]"<< std::endl;
    }
 
    std::cout << "iv.size(): " << iv.size() << " [6]" << std::endl;
    try
    {
      std::cout << "iv.get(10): " <<iv.get(10) << std::endl;
-   }
-   catch (std::out_of_range)
+   } catch (std::out_of_range)
    {
      std::cout<< "Index out of range" << std::endl;
    }
+
 
    //-------------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ int main()
    std::cout << "----------------" << std::endl;
    std::cout << "CharacterVector:" << std::endl;
    std::cout << "cv.get(0)" << cv.get(0)<< ": 'h'" << std::endl;
-   std::cout << "cv.size()" << cv.size() <<  ": 1" << std::endl;
+   std::cout << "cv.size()" << cv.size() <<  ": 0" << std::endl;
    try
    {
      std::cout << "cv.get(10): " << cv.get(10) << std::endl;
@@ -139,11 +139,6 @@ int main()
    std::cout << "----------------------------" << std::endl;
    std::cout << "appended-to CharacterVector:" << std::endl;
    std::cout << "----------------------------" << std::endl;
-   cv2.appendIntegerVector(iv);
-   cv2.appendDoubleVector(dv);
-   for(int i = 0; i < cv2.size(); i++){
-      std::cout << cv2.get(i) << std::endl;
-   }
 
    //-------------------------------------------------------------------------
 
