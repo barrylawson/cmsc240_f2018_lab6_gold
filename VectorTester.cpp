@@ -38,11 +38,11 @@ int main()
    try
    {
      std::cout << "iv.get(10): " <<iv.get(10) << std::endl;
-   } catch (std::out_of_range)
+   }
+   catch (std::out_of_range)
    {
      std::cout<< "Index out of range" << std::endl;
    }
-
 
    //-------------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ int main()
    std::cout << "----------------" << std::endl;
    std::cout << "CharacterVector:" << std::endl;
    std::cout << "cv.get(0)" << cv.get(0)<< ": 'h'" << std::endl;
-   std::cout << "cv.size()" << cv.size() <<  ": 0" << std::endl;
+   std::cout << "cv.size()" << cv.size() <<  ": 1" << std::endl;
    try
    {
      std::cout << "cv.get(10): " << cv.get(10) << std::endl;
@@ -139,6 +139,11 @@ int main()
    std::cout << "----------------------------" << std::endl;
    std::cout << "appended-to CharacterVector:" << std::endl;
    std::cout << "----------------------------" << std::endl;
+   cv2.appendIntegerVector(iv);
+   cv2.appendDoubleVector(dv);
+   for(int i = 0; i < cv2.size(); i++){
+      std::cout << cv2.get(i) << std::endl;
+   }
 
    //-------------------------------------------------------------------------
 
