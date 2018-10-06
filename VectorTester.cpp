@@ -70,34 +70,33 @@ int main()
    std::cout << std::endl;
    std::cout << "-------------" << std::endl;
    std::cout << "DoubleVector:" << std::endl;
-   dv.put(38.0);
-   std::cout << "dv.put(38.0): " << dv.get(0) << " [38]" << std::endl;
-   dv.put(39.3);
-   std::cout << "dv.put(39.3): " << dv.get(1) << " [39.3]" << std::endl;
-   dv.put(111.4);
-   std::cout << "dv.put(111.4): " << dv.get(2) << " [111.4]" << std::endl;
-   std::cout << "dv.get(0): " << dv.get(0) << " [38]" << std::endl;
-   std::cout << "dv.get(1): " << dv.get(1) << " [39.3]" << std::endl;
-   std::cout << "dv.get(2): " << dv.get(2) << " [111.4]" << std::endl;
-
-   std::cout << std::endl;
-
-   dv.put(65.1, 1);
-   std::cout << "dv.put(65.1, 1): " << dv.get(1) << " [65.1]" << std::endl;
+   std::cout << "-------------" << std:: endl;
+   dv.put(106.0);
+   std::cout << "dv.put(106.0): " << dv.get(0) << " [106]" << std::endl;
+   dv.put(107.3);
+   std::cout << "dv.put(107.3): " << dv.get(1) << " [107.3]" << std::endl;
+   dv.put(108.4);
+   std::cout << "dv.put(108.4): " << dv.get(2) << " [108.4]" << std::endl;
+   std::cout << "dv.get(0): " << dv.get(0) << " [106]" << std::endl;
+   std::cout << "dv.get(1): " << dv.get(1) << " [107.3]" << std::endl;
+   std::cout << "dv.get(2): " << dv.get(2) << " [108.4]" << std::endl;
+   dv.put(107.9, 1);
+   std::cout << "dv.put(107.9, 1): " << dv.get(1) << " [107.9]" << std::endl;
    std::cout << "dv.size(): " << dv.size() << " [3]" << std::endl;
+   std::cout << "dv.get(0): " << dv.get(0) << " [106]" << std::endl;
+   std::cout << "dv.get(1): " << dv.get(1) << " [107.9]" << std::endl;
+   std::cout << "dv.get(2): " << dv.get(2) << " [108.4]" << std::endl;
 
    std::cout << std::endl;
 
    try
    {
-     std::cout << "dv.get(10): " << cv.get(10) << std::endl;
+     std::cout << "dv.get(10): " << dv.get(10) << std::endl;
    } catch (std::out_of_range)
    {
      std::cout<< "Index out of range" << std::endl;
    }
 
-   std::cout << std::endl;
-   std::cout << "-------------" << std::endl;
 
    //-------------------------------------------------------------------------
 
@@ -110,10 +109,14 @@ int main()
    std::cout << "--------------------------" << std::endl;
 
    //-------------------------------------------------------------------------
-   iv.appendDoubleVector(dv);
-   iv.appendCharacterVector(cv);
-   for(int i = 0; i < iv.size(); i++)
-     std::cout << iv.get(i) << std::endl;
+   iv2 = iv;
+   iv2.appendDoubleVector(dv);
+   iv2.appendCharacterVector(cv);
+   for(int i = 0; i < iv2.size(); i++)
+     std::cout << iv2.get(i) << std::endl;
+
+
+
    // using empty CharacterVector, test appending iv & dv from above
    CharacterVector cv2;
 
@@ -132,6 +135,13 @@ int main()
    std::cout << "appended-to DoubleVector:" << std::endl;
    std::cout << "-------------------------" << std::endl;
 
+   dv2 = dv;
+   dv2.appendIntegerVector(iv);
+   dv2.appendCharacterVector(cv);
+   for(int i = 0; i < dv2.size(); i++)
+   {
+     std::cout << dv2.get(i) << std::endl;
+   }
    //-------------------------------------------------------------------------
 
    return 0;
