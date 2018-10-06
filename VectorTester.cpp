@@ -69,41 +69,23 @@ int main()
 
    std::cout << std::endl;
    std::cout << "-------------" << std::endl;
-   std::cout << std::endl;
    std::cout << "DoubleVector:" << std::endl;
-   dv.put(4.0);
-   dv.put(3.3);
-   dv.put(9.4);
-   std::cout << "Used put(double n) to add 4.0, 3.3, 9.4 : " << std::endl;
-
-   for(int i = 0; i < dv.size(); i++)
-   {
-      std::cout << dv.get(i) << " ";
-   }
-
-
-   std::cout << std::endl;
-   std::cout << std::endl;
-
-
-   dv.put(11.1, 1);
-   std::cout << "Used put(double n, int m) to put 11.1 at middle index : " << std::endl;
-   for(int i = 0; i < dv.size(); i++)
-   {
-      std::cout << dv.get(i) << " ";
-   }
+   dv.put(38.0);
+   std::cout << "dv.put(38.0): " << dv.get(0) << " [38]" << std::endl;
+   dv.put(39.3);
+   std::cout << "dv.put(39.3): " << dv.get(1) << " [39.3]" << std::endl;
+   dv.put(111.4);
+   std::cout << "dv.put(111.4): " << dv.get(2) << " [111.4]" << std::endl;
+   std::cout << "dv.get(0): " << dv.get(0) << " [38]" << std::endl;
+   std::cout << "dv.get(1): " << dv.get(1) << " [39.3]" << std::endl;
+   std::cout << "dv.get(2): " << dv.get(2) << " [111.4]" << std::endl;
 
    std::cout << std::endl;
-   std::cout << std::endl;
 
-   std::cout << "Used get(int n) to print out values in reverse : " << std::endl;
+   dv.put(65.1, 1);
+   std::cout << "dv.put(65.1, 1): " << dv.get(1) << " [65.1]" << std::endl;
+   std::cout << "dv.size(): " << dv.size() << " [3]" << std::endl;
 
-   for(int i = dv.size()-1; i > -1; i--)
-   {
-      std::cout << dv.get(i) << " ";
-   }
-
-   std::cout << std::endl;
    std::cout << std::endl;
 
    try
