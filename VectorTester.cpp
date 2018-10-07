@@ -109,7 +109,8 @@ int main()
    std::cout << "--------------------------" << std::endl;
 
    //-------------------------------------------------------------------------
-   iv2 = iv;
+
+
    iv2.appendDoubleVector(dv);
    iv2.appendCharacterVector(cv);
    for(int i = 0; i < iv2.size(); i++)
@@ -140,7 +141,6 @@ int main()
    std::cout << "appended-to DoubleVector:" << std::endl;
    std::cout << "-------------------------" << std::endl;
 
-   dv2 = dv;
    dv2.appendIntegerVector(iv);
    dv2.appendCharacterVector(cv);
    for(int i = 0; i < dv2.size(); i++)
