@@ -44,8 +44,15 @@ TEST 1: put(), get() and size()
 Added an element with put() and printed it to the console with get()
 
 	RESULT:
-    get(0): 78 [Expected: 78]
-		Size: 1 [Expected: 1]
+		IntegerVector:
+    	get(0): 78 [Expected: 78]
+			Size: 1 [Expected: 1]
+		CharacterVector:
+			get(0): h [Expected: h]
+			Size: 2 [Expected: 2]
+		DoubleVector:
+			get(0): 106.0 [Expected: 106.0]
+			Size: 3 [Expected: 3]
 
 	This shows that the put, get and size methods work as expected.
 ---------------------------------------------------------------------------------------------------------------------
@@ -54,7 +61,12 @@ TEST 2: get() out of range
   the size results in an exception.
 
 	RESULT:
-		get(10): Index out of range [Expected: "Index out of range"]
+		IntegerVector:
+			get(10): Index out of range [Expected: "Index out of range"]
+		CharacterVector:
+			get(10): Index out of range [Expected: "Index out of range"]
+		DoubleVector:
+			get(10): Index out of range [Expected: "Index out of range"]
 
 	Hence, get() works with invalid arguments
 
@@ -65,8 +77,15 @@ TEST 3: append**Vector()
   vectors are appended.
 
 	RESULT:
-	 The elements of the two other arrays are correctly cast and added to the end of the
-   specific vector
+		IntegerVector:
+	 		The elements of the two other arrays are correctly cast and added to the end of the
+   		specific vector
+		CharacterVector:
+			The elements of the two other arrays are correctly cast and added to the end of the
+			specific vector
+		DoubleVector:
+			The elements of the two other arrays are correctly cast and added to the end of the
+			specific vector
 
 	Hence, append**Vector() works as expected.
 ---------------------------------------------------------------------------------------------------------------------
