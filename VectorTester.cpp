@@ -30,9 +30,7 @@ int main()
      iv.put(i); // add 5 elements to iv
    }
    for (int i = 0; i < iv.size(); i++)
-   {
      std::cout << "iv.get(" << i << "): " << iv.get(i) << " [" << i+78 <<"]"<< std::endl;
-   }
 
    std::cout << "iv.size(): " << iv.size() << " [6]" << std::endl;
    try
